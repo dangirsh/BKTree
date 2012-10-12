@@ -1,8 +1,8 @@
 # Dan Girshovich, 6/12
 
 import unittest
-from crashdb.model.BKTree import BKTree
-from crashdb.scripts.levenshtein import distance as get_distance
+from BKTree import BKTree
+from Levenshtein import distance as get_distance
 
 class BKTreeTest(unittest.TestCase):
     '''test inserts and queries for this tree:
@@ -45,3 +45,6 @@ class BKTreeTest(unittest.TestCase):
         _check_query('bc', 1, 7, ['bc', 'abc'])
 
         self.assertEqual(BKTree.get_average_distance(tree), 1.5)
+
+if __name__ == '__main__':
+    unittest.main()
